@@ -47,6 +47,7 @@ namespace BookAPI.Controllers
             await _context.SaveChangesAsync();
             return Ok(await _context.Books.ToListAsync());
         }
+        //delete
         [HttpDelete("{id}")]
         public async Task<ActionResult<List<Book>>> DeleteBook(int id)
         {
